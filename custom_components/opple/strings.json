@@ -1,0 +1,56 @@
+{
+  "title": "Opple",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add an Opple light",
+        "description": "Connect to an Opple Wi-Fi light on your local network.",
+        "data": {
+          "name": "Name",
+          "host": "IP address",
+          "allow_offline": "Allow adding while the light is offline"
+        },
+        "data_description": {
+          "name": "The name shown for the device in Home Assistant.",
+          "host": "A fixed IPv4 address for the light.",
+          "allow_offline": "Skips the connection test. The entry will retry until the light is reachable."
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Opple light",
+        "description": "Update the light name or IP address.",
+        "data": {
+          "name": "Name",
+          "host": "IP address",
+          "allow_offline": "Save without testing the connection"
+        },
+        "data_description": {
+          "name": "The name shown for the device in Home Assistant.",
+          "host": "A fixed IPv4 address for the light.",
+          "allow_offline": "Use only when the light is temporarily unavailable."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the light. Check its IP address and power.",
+      "invalid_host": "Enter a valid IPv4 address.",
+      "unknown": "Unexpected error. Check the logs for details."
+    },
+    "abort": {
+      "already_configured": "This light is already configured.",
+      "invalid_host": "The imported YAML contains an invalid IPv4 address.",
+      "unique_id_mismatch": "The new IP address belongs to a different light."
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "The Opple light is unavailable."
+    },
+    "command_failed": {
+      "message": "The command could not be confirmed by the Opple light."
+    },
+    "duplicate_device": {
+      "message": "Another Opple config entry already represents this light."
+    }
+  }
+}

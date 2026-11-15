@@ -1,0 +1,56 @@
+{
+  "title": "Opple",
+  "config": {
+    "step": {
+      "user": {
+        "title": "添加 Opple 灯",
+        "description": "连接局域网中的 Opple Wi-Fi 灯。",
+        "data": {
+          "name": "名称",
+          "host": "IP 地址",
+          "allow_offline": "允许灯离线时添加"
+        },
+        "data_description": {
+          "name": "设备在 Home Assistant 中显示的名称。",
+          "host": "灯的固定 IPv4 地址。",
+          "allow_offline": "跳过连接测试；配置条目会持续重试，直到灯可以访问。"
+        }
+      },
+      "reconfigure": {
+        "title": "重新配置 Opple 灯",
+        "description": "修改灯的名称或 IP 地址。",
+        "data": {
+          "name": "名称",
+          "host": "IP 地址",
+          "allow_offline": "不测试连接直接保存"
+        },
+        "data_description": {
+          "name": "设备在 Home Assistant 中显示的名称。",
+          "host": "灯的固定 IPv4 地址。",
+          "allow_offline": "仅在灯暂时离线时使用。"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "无法连接灯，请检查 IP 地址和供电。",
+      "invalid_host": "请输入有效的 IPv4 地址。",
+      "unknown": "发生意外错误，请查看日志。"
+    },
+    "abort": {
+      "already_configured": "这个灯已经配置。",
+      "invalid_host": "导入的 YAML 包含无效 IPv4 地址。",
+      "unique_id_mismatch": "新的 IP 地址属于另一盏灯。"
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "Opple 灯当前不可用。"
+    },
+    "command_failed": {
+      "message": "Opple 灯未能确认控制命令。"
+    },
+    "duplicate_device": {
+      "message": "另一个 Opple 配置条目已经代表这盏灯。"
+    }
+  }
+}

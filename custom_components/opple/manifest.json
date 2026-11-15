@@ -1,0 +1,13 @@
+{
+  "domain": "opple",
+  "name": "Opple",
+  "codeowners": ["@Xc1Ym"],
+  "config_flow": true,
+  "connectivity": ["network"],
+  "documentation": "https://www.home-assistant.io/integrations/opple/",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "loggers": ["pyoppleio"],
+  "requirements": ["pyoppleio-legacy==1.0.8"],
+  "version": "2.0.0"
+}
