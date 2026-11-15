@@ -52,13 +52,19 @@ def snapshot_device(device: OppleLightDevice) -> OppleState:
         raise OppleConnectionError("The device is offline")
 
     mac = _mac_from_device(device)
+    device_name = (
+        str(getattr(device, "name", ""))
+        .replace("\x00", "")
+        .rstrip("@")
+        .strip()
+    )
     # Keep the exact legacy library value for the light entity unique ID so an
     # existing entity-registry record is reused during migration.
     legacy_unique_id = str(getattr(device, "mac", "")) or mac
     return OppleState(
         legacy_unique_id=legacy_unique_id,
         mac=mac,
-        device_name=str(getattr(device, "name", "")),
+        device_name=device_name,
         is_on=bool(device.power_on),
         brightness=int(device.brightness),
         color_temp_kelvin=int(device.color_temperature),
