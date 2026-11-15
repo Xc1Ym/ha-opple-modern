@@ -43,10 +43,10 @@
 light:
   - platform: opple
     name: keting
-    host: 10.10.20.2
+    host: 192.0.2.10
   - platform: opple
     name: canting
-    host: 10.10.20.3
+    host: 192.0.2.11
 ```
 
 安装本集成并首次重启后，这些条目会自动导入到“设备与服务”。确认两个配置条目
