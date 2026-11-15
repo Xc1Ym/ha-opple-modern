@@ -5,7 +5,6 @@ from collections.abc import Mapping
 from typing import Any, override
 
 import probatio
-
 from homeassistant.config_entries import ConfigFlow, ConfigFlowResult
 from homeassistant.const import CONF_HOST, CONF_NAME
 from homeassistant.helpers.selector import TextSelector, TextSelectorConfig

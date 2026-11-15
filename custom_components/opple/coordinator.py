@@ -6,13 +6,12 @@ from dataclasses import dataclass
 from functools import partial
 from typing import ParamSpec, TypeVar, override
 
-from pyoppleio.OppleLightDevice import OppleLightDevice
-
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOST
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryError, HomeAssistantError
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
+from pyoppleio.OppleLightDevice import OppleLightDevice
 
 from .const import DOMAIN, LOGGER, SCAN_INTERVAL
 

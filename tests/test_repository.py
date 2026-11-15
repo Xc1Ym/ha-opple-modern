@@ -1,8 +1,8 @@
 """Repository-level checks which do not require a Home Assistant test install."""
 
 import json
-from pathlib import Path
 import unittest
+from pathlib import Path
 
 ROOT = Path(__file__).parents[1]
 COMPONENT = ROOT / "custom_components" / "opple"

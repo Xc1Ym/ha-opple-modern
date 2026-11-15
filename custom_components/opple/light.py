@@ -4,13 +4,14 @@ import logging
 from typing import Any, override
 
 import probatio
-
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS,
     ATTR_COLOR_TEMP_KELVIN,
-    PLATFORM_SCHEMA as LIGHT_PLATFORM_SCHEMA,
     ColorMode,
     LightEntity,
+)
+from homeassistant.components.light import (
+    PLATFORM_SCHEMA as LIGHT_PLATFORM_SCHEMA,
 )
 from homeassistant.config_entries import SOURCE_IMPORT
 from homeassistant.const import CONF_HOST, CONF_NAME
